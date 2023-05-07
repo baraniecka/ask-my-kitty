@@ -24,17 +24,20 @@ public class CatController {
     @Autowired
     private CommonCatService commonCatService;
 
+    @Autowired FactCat factCat;
+
 @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping("/tell-fact")
-    public ResponseEntity<List<FactCat>> catTellFact(){
+    public ResponseEntity<FactCat> catTellFact(){
+        commonCatService.tellFact();
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(commonCatService.tellFact());
+                .body(factCat);
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping("/tell-joke")
-    public ResponseEntity<List<CheezyCat>> catTellJoke(){
+    public ResponseEntity<CheezyCat> catTellJoke(){
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(commonCatService.tellJoke());

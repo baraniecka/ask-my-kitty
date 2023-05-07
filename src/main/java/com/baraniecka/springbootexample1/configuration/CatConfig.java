@@ -30,8 +30,8 @@ public class CatConfig {
     private String cheezyGoal;
     @Autowired
     private FactCat factCat;
-    @Autowired
-    private CheezyCat cheezyCat;
+//    @Autowired
+//    private CheezyCat cheezyCat;
 
     @PostConstruct
     public FactCat factCatConfig() {
@@ -43,12 +43,12 @@ public class CatConfig {
 
     }
 
-    @PostConstruct
-    public CheezyCat cheezyCatConfig(){
-
-        cheezyCat.setName(cheezyName);
-        cheezyCat.setAge(cheezyAge);
-        cheezyCat.setLifeGoal(cheezyGoal);
-        return cheezyCat;
-    }
+//    @PostConstruct
+//    public CheezyCat cheezyCatConfig(){
+//
+//        cheezyCat.setName(cheezyName);
+//        cheezyCat.setAge(cheezyAge);
+//        cheezyCat.setLifeGoal(cheezyGoal);
+//        return cheezyCat;
+//    }
 }

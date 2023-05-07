@@ -6,7 +6,6 @@ import lombok.Data;
 @Data
 
 public class Joke {
-
     String setup;
     String punchline;
 }
